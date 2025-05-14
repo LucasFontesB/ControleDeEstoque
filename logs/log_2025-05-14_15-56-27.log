@@ -1,0 +1,52 @@
+2025-05-14 15:56:27,273 - INFO - Iniciando Programa...
+2025-05-14 15:56:27,273 - INFO - Verificacao de horarios
+2025-05-14 15:56:27,273 - INFO - DB - Buscando Horarios Abertos Dos Usuarios
+2025-05-14 15:56:27,274 - INFO - DB - Resultado Da Busca De Horarios Abertos
+2025-05-14 15:56:27,275 - INFO - DB - [(1, 137)]
+2025-05-14 15:56:27,275 - INFO - Lista de ID's com turno ABERTO: [1]
+2025-05-14 15:56:27,275 - INFO - 
+============LOG USUÁRIO 1============
+
+2025-05-14 15:56:27,275 - INFO - DB - Buscando Horário De Entrada Para O Usuario ID 1
+2025-05-14 15:56:27,276 - INFO - DB - Resultado Dos Turnos Abertos Do Usuario ID 1: [('14/05/2025 15:50:14',)]
+2025-05-14 15:56:27,277 - INFO - Data De Entrada: 14/05/2025 15:50:14
+2025-05-14 15:56:27,277 - INFO - Data Atual: 14/05/2025 15:56:27
+2025-05-14 15:56:27,277 - INFO - Diferenca De Horas: 0:06:13
+2025-05-14 15:56:27,277 - INFO - Usuario com id 1 logado a menos de 24 horas, continuando turno
+2025-05-14 15:56:27,277 - INFO - 
+=====================================
+
+2025-05-14 15:56:31,602 - INFO - Iniciando Turno...
+2025-05-14 15:56:31,602 - INFO - 
+
+
+Usuario nao logado. Iniciando registro de turno...
+
+2025-05-14 15:56:31,603 - INFO - 
+============LOG INICIO DE TURNO ID 2============
+
+2025-05-14 15:56:31,603 - INFO - Hora Atual: 2025-05-14 15:56:31
+2025-05-14 15:56:31,603 - INFO - DB - Iniciando Turno Do Usuario ID 2 Com a Hora Atual: 14/05/2025 15:56:31
+2025-05-14 15:56:31,615 - INFO - Turno Iniciado Com Sucesso!
+2025-05-14 15:56:31,615 - INFO - 
+================================================
+
+2025-05-14 15:56:31,615 - INFO - Iniciando Usuário Com ID: 2
+2025-05-14 15:56:31,618 - INFO - Usuario ID 2 Iniciado Com Sucesso
+
+2025-05-14 15:56:31,692 - INFO - Preparando para registrar turno
+2025-05-14 15:56:34,004 - INFO - Fechando Turno e Finalizando Janela
+2025-05-14 15:56:34,836 - INFO - Finalizando Turno...
+2025-05-14 15:56:34,837 - INFO - DB - Buscando Horario De Saida Do Usuario ID 2 Do Turno ID 139
+2025-05-14 15:56:34,838 - INFO - DB - Nenhum Resultado Dos Horários De Saida Do Usuario ID
+                         2 Do Turno ID 139 Encontrado
+2025-05-14 15:56:34,838 - INFO - 
+============LOG FECHAMENTO USUaRIO 2============
+
+2025-05-14 15:56:34,839 - INFO - Hora atual: 14/05/2025 15:56:34
+2025-05-14 15:56:34,839 - INFO - Registrando Horario Final No Registro De Turnos...
+2025-05-14 15:56:34,839 - INFO - DB - Finalizando Turno Do Usuário ID 2 Com A Hora Atual: 14/05/2025 15:56:34
+2025-05-14 15:56:34,846 - INFO - 
+================================================
+
+2025-05-14 15:56:34,867 - INFO - Turno Finalizado Com Sucesso e Fechando a Janela

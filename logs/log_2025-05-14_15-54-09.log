@@ -1,0 +1,29 @@
+2025-05-14 15:54:09,820 - INFO - Iniciando Programa...
+2025-05-14 15:54:09,820 - INFO - Verificacao de horarios
+2025-05-14 15:54:09,820 - INFO - DB - Buscando Horarios Abertos Dos Usuarios
+2025-05-14 15:54:09,821 - INFO - DB - Resultado Da Busca De Horarios Abertos
+2025-05-14 15:54:09,821 - INFO - DB - [(1, 137)]
+2025-05-14 15:54:09,822 - INFO - Lista de ID's com turno ABERTO: [1]
+2025-05-14 15:54:09,822 - INFO - 
+============LOG USUÁRIO 1============
+
+2025-05-14 15:54:09,822 - INFO - DB - Buscando Horário De Entrada Para O Usuario ID 1
+2025-05-14 15:54:09,823 - INFO - DB - Resultado Dos Turnos Abertos Do Usuario ID 1: [('14/05/2025 15:50:14',)]
+2025-05-14 15:54:09,823 - INFO - Data De Entrada: 14/05/2025 15:50:14
+2025-05-14 15:54:09,824 - INFO - Data Atual: 14/05/2025 15:54:09
+2025-05-14 15:54:09,824 - INFO - Diferenca De Horas: 0:03:55
+2025-05-14 15:54:09,824 - INFO - Usuario com id 1 logado a menos de 24 horas, continuando turno
+2025-05-14 15:54:09,824 - INFO - 
+=====================================
+
+2025-05-14 15:54:14,448 - INFO - Iniciando Turno...
+2025-05-14 15:54:14,448 - INFO - 
+
+
+Usuario ja logado
+2025-05-14 15:54:14,448 - INFO - Continuando Sem Inicar Turno...
+
+2025-05-14 15:54:14,448 - INFO - Iniciando Usuário Com ID: 1
+2025-05-14 15:54:14,450 - INFO - Usuario ID 1 Iniciado Com Sucesso
+
+2025-05-14 15:54:14,514 - INFO - Preparando para registrar turno
