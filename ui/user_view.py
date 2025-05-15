@@ -1,11 +1,14 @@
 from customtkinter import *
 
+import logging
+
 from PIL import Image
 
 from controllers.controle_janela import inserir_icon, centralizar_janela
 from controllers import controle_userview
 
 def iniciar(janela, usuario):
+    logging.info("Iniciando Janela De Perfil")
     nome = usuario.nome
     senha = usuario.senha
 
@@ -35,7 +38,7 @@ def iniciar(janela, usuario):
         img_data = Image.open("assets/images/account_img.png")
         img = CTkImage(light_image=img_data, size=(180, 180))
     except Exception as error:
-        print(f"erro: {error}")
+        logging.warning(f"erro: {error}")
         return
 
     frame_img = CTkFrame(master=frame_principal, height=200, width=200, fg_color="transparent")
