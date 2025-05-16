@@ -62,11 +62,72 @@ class TelaPrincipal:
                                 self.janela_principal, usuario))
         img_botao.place(rely=0.5, relx=0.2, anchor="center")
 
-        botao_fechar_turno = CTkButton(master=frame_menu, text="Sair/Finalizar Turno",
+        try:
+            add_img_data = Image.open("assets/images/add_img.png")
+            add_img = CTkImage(light_image=add_img_data, size=(35, 35))
+        except Exception as error:
+            print(f"erro: {error}")
+            return
+
+        botao_adicionarprodutos = CTkButton(master=frame_menu, text=" Adicionar Produtos", font=CTkFont(size=16),
+                                            corner_radius=15, width=190, height=50, image=add_img, compound="left",
+                                            anchor="center")
+        botao_adicionarprodutos.pack(pady=15, anchor="center")
+        botao_adicionarprodutos.propagate(0)
+
+        try:
+            sell_img_data = Image.open("assets/images/sell_img.png")
+            sell_img = CTkImage(light_image=sell_img_data, size=(35, 35))
+        except Exception as error:
+            print(f"erro: {error}")
+            return
+
+        botao_venderprodutos = CTkButton(master=frame_menu, text="  Vender Produtos", font=CTkFont(size=16),
+                                            corner_radius=15, width=210, height=50, image=sell_img, compound="left",
+                                         anchor="center")
+        botao_venderprodutos.pack(anchor="center")
+        botao_venderprodutos.propagate(True)
+
+        try:
+            stock_img_data = Image.open("assets/images/stock_img.png")
+            stock_img = CTkImage(light_image=stock_img_data, size=(35, 35))
+        except Exception as error:
+            print(f"erro: {error}")
+            return
+
+        botao_estoque = CTkButton(master=frame_menu, text="  Abrir Estoque", font=CTkFont(size=16),
+                                         corner_radius=15, width=210, height=50, image=stock_img, compound="left",
+                                  anchor="center")
+        botao_estoque.pack(pady=15, anchor="center")
+        botao_estoque.propagate(True)
+
+        try:
+            config_img_data = Image.open("assets/images/config_img.png")
+            config_img = CTkImage(light_image=config_img_data, size=(35, 35))
+        except Exception as error:
+            print(f"erro: {error}")
+            return
+
+        botao_config = CTkButton(master=frame_menu, text="  Configurações", font=CTkFont(size=16),
+                                         corner_radius=15, width=210, height=50, image=config_img, compound="left",
+                                 anchor="center")
+        botao_config.pack(anchor="center")
+        botao_config.propagate(True)
+
+        try:
+            quit_img_data = Image.open("assets/images/quit_img.png")
+            quit_img = CTkImage(light_image=quit_img_data, size=(35, 35))
+        except Exception as error:
+            print(f"erro: {error}")
+            return
+
+        botao_fechar_turno = CTkButton(master=frame_menu, text=" Sair/Finalizar Turno",
                                             command=lambda: controle_telaprincipal.fechar(
                                             self.janela_principal, usuario), font=CTkFont(size=16),
-                                            corner_radius=15, width=190, height=50)
-        botao_fechar_turno.place(rely=0.95, relx=0.5, anchor="s")
+                                            corner_radius=15, width=210, height=50, image=quit_img,compound="left",
+                                       anchor="center")
+        botao_fechar_turno.pack(side="bottom", pady=15)
+        botao_fechar_turno.propagate(True)
 
         inserir_icon(self.janela_principal, "logo")
 

@@ -161,9 +161,9 @@ def buscar_usuario(id_usuario):
             logging.info("DB - Efetuando RollBack - buscar_usuario")
             conn.rollback()
         else:
-            logging.warning("Erro Ao Efetuar RollBack - DB - buscar_usuario")
+            logging.warning("DB - Erro Ao Efetuar RollBack - buscar_usuario")
     finally:
         if conn:
             conn.close()
         else:
-            logging.warning("Erro Ao Fechar Conn - buscar_usuario")
+            logging.warning("DB - Erro Ao Fechar Conn - buscar_usuario")
