@@ -4,6 +4,9 @@ from customtkinter import *
 
 from PIL import Image
 
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
 from controllers.controle_janela import centralizar_janela
 from controllers import controle_usuario
 from controllers import controle_mensagens
@@ -18,17 +21,53 @@ class TelaPrincipal:
     def iniciar(self):
         self.janela_principal = CTk()
         self.janela_principal.title("Estoque")
-        centralizar_janela(self.janela_principal, 1250, 750)
+        centralizar_janela(self.janela_principal, 1500, 900)
         controle_usuario.ControleUsuario.iniciar_turno(self.id_usuario, self.is_logado)
         usuario = controle_usuario.ControleUsuario.iniciar_usuario(self.id_usuario)
         nome_usuario = usuario.nome
         self.janela_principal.resizable(False, False)
 
-        frame_principal = CTkFrame(master=self.janela_principal, fg_color="blue", width=1250, height=750)
+        frame_principal = CTkFrame(master=self.janela_principal, fg_color="blue", width=1500, height=900)
         frame_principal.pack()
         frame_principal.propagate(0)
 
-        frame_menu = CTkFrame(master=frame_principal, fg_color="black", width=250, height=750)
+        frame_graficos = CTkFrame(master=frame_principal, fg_color="black", width=1225, height=875, border_width=2, border_color="white")
+        frame_graficos.place(relx=0.175, rely=0.018)
+        frame_graficos.propagate(0)
+
+        horas = ['09h', '10h', '11h', '12h', '13h', '14h']
+        valores = [120, 200, 150, 300, 220, 180]
+
+        vendas_dia = Figure(figsize=(6, 3.8), dpi=100)
+        ax_vendas_dia = vendas_dia.add_subplot(111)
+        ax_vendas_dia.plot(horas, valores, marker='o', linestyle='-', color='blue')
+
+        ax_vendas_dia.set_title("Vendas por Hora - Hoje")
+        ax_vendas_dia.set_xlabel("Hora")
+        ax_vendas_dia.set_ylabel("Valor (R$)")
+        ax_vendas_dia.grid(True)
+
+        canvas_vendas_dia = FigureCanvasTkAgg(vendas_dia, master=frame_graficos)
+        canvas_vendas_dia.draw()
+        canvas_vendas_dia.get_tk_widget().place(relx=0.02, rely=0.03)
+
+        dias_semana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+        valores_semana = [150, 200, 120, 300, 80, 500, 700]
+
+        fig = Figure(figsize=(6, 3.8), dpi=100)
+        ax = fig.add_subplot(111)
+        ax.bar(dias_semana, valores_semana, color='skyblue')
+
+        ax.set_title("Vendas por Produto - Hoje")
+        ax.set_xlabel("Dia Da Semana")
+        ax.set_ylabel("Valor Vendido (R$)")
+        ax.grid(True, axis='y', linestyle='--', alpha=0.7)
+
+        canvas = FigureCanvasTkAgg(fig, master=frame_graficos)
+        canvas.draw()
+        canvas.get_tk_widget().place(relx=0.02, rely=0.5)
+
+        frame_menu = CTkFrame(master=frame_principal, fg_color="black", width=250, height=900)
         frame_menu.pack(anchor="w")
         frame_menu.propagate(0)
 
