@@ -2,11 +2,11 @@ import logging
 
 from utils.datas_hora import get_horaatual, formatar_datahora_objdatetime, formatar_datahora_str
 
+from controllers.controle_mensagens import CaixaMensagens
+
 from database import db_turnos
 
 from datetime import timedelta
-
-from controllers.controle_mensagens import CaixaMensagens
 
 def registrar_inicio_turno(is_logado, id_usuario):
     if is_logado == 1:

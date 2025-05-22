@@ -8,6 +8,14 @@ def alterar_horario(id_usuario):
     conn.commit()
     conn.close()
 
+def deletar(id):
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM categorias WHERE id = ?", (id,))
+    conn.commit()
+    conn.close()
+
 
 
 

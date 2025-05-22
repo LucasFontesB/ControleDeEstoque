@@ -2,11 +2,10 @@ import logging
 
 import os
 
+import database.db_estoque
 from utils.datas_hora import get_horaatual
 
-from database import db_conexao
-from database import db_turnos
-from database import db_usuarios
+from database import db_conexao, db_manager
 
 from controllers.controle_turno import verificar_horario
 
@@ -28,9 +27,10 @@ logging.basicConfig(
     filemode="w"
 )
 
-#db_turnos.alterar_turno(2, "11/05/2025 10:00:00")
+#database.db_estoque.cadastrar_categoria("Bebida")
+#database.db_estoque.cadastrar_produto("Agua", 10, 0.75, 3, 1)
 
-#db_usuarios.remover_usuario(3)
+
 
 db_conexao.criar_tabelas()
 

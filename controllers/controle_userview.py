@@ -1,10 +1,10 @@
 import logging
-import time
 
 from controllers.controle_mensagens import CaixaMensagens
+
 from utils import reiniciar_sistema
+
 from database.db_usuarios import editar_cadastro
-from ui.tela_principal import TelaPrincipal
 
 
 edicao_ativa = 0

@@ -4,8 +4,6 @@ from customtkinter import *
 
 from controllers.controle_janela import centralizar_janela, inserir_icon
 from controllers.controle_login import autenticar_usuario
-import controllers.controle_mensagens
-
 
 class TelaLogin:
     def __init__(self):
