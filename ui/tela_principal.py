@@ -7,7 +7,9 @@ from PIL import Image
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
+import ui.vender_produtos
 import utils.datas_hora
+
 from controllers.controle_janela import centralizar_janela, inserir_icon
 from controllers import controle_usuario, controle_mensagens, controle_telaprincipal
 
@@ -61,7 +63,7 @@ class TelaPrincipal:
         canvas_vendas_semana.draw()
         canvas_vendas_semana.get_tk_widget().place(relx=0.02, rely=0.5)
 
-        controle_telaprincipal.atualizar_vendas_por_dia(ax_vendas_semana, canvas_vendas_semana)
+        #controle_telaprincipal.atualizar_vendas_por_dia(ax_vendas_semana, canvas_vendas_semana)
 
         frame_menu = CTkFrame(master=frame_principal, fg_color="black", width=250, height=900)
         frame_menu.pack(anchor="w")
@@ -119,7 +121,7 @@ class TelaPrincipal:
 
         botao_venderprodutos = CTkButton(master=frame_menu, text="  Vender Produtos", font=CTkFont(size=16),
                                             corner_radius=15, width=210, height=50, image=sell_img, compound="left",
-                                         anchor="center")
+                                         anchor="center", command=lambda: ui.vender_produtos.iniciar_venda(usuario))
         botao_venderprodutos.pack(anchor="center")
         botao_venderprodutos.propagate(True)
 
